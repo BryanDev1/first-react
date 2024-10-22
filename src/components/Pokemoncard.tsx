@@ -17,7 +17,7 @@ function Pokemoncard() {
       {pokemon.imgSrc ? (
         <img src={pokemon.imgSrc} alt={pokemon.name} />
       ) : (
-        <p>Qu'est ce que c'est</p>
+        <p>what is it ?</p>
       )}
       <figcaption>{pokemon.name}</figcaption>
     </figure>
