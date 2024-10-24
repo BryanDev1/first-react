@@ -1,10 +1,6 @@
-interface pokemon {
+interface Pokemonprops {
   name: string;
   imgSrc?: string;
-}
-
-interface Pokemonprops {
-  pokemon: pokemon;
 }
 
 function Pokemoncard({ pokemon }: Pokemonprops) {
