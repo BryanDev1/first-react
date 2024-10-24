@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import MyTitle from "./components/Mytitle";
 import Pokemoncard from "./components/Pokemoncard";
+import NavBar from "./components/NavBar";
 
 const pokemonList = [
   {
@@ -32,24 +33,15 @@ const pokemonList = [
 function App() {
   const [Index, pokemonIndex] = useState(0);
 
-  const Previous = () => {
-    pokemonIndex(Index - 1);
-  };
-
-  const Next = () => {
-    pokemonIndex(Index + 1);
-  };
-
   return (
     <div>
       <MyTitle />
       <Pokemoncard pokemon={pokemonList[Index]} />
-      <button type="button" onClick={Previous}>
-        Previous
-      </button>
-      <button type="button" onClick={Next}>
-        Next
-      </button>
+      <NavBar
+        Index={Index}
+        PokemonIndex={pokemonIndex}
+        pokemonList={pokemonList}
+      />
     </div>
   );
 }
